@@ -1,0 +1,170 @@
+/* General styling for About section */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(0, 255, 255, 0.2); /* Light blue background */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    color: #333; /* Neutral text color */
+    margin: 30px 0; /* Adds spacing between sections */
+  }
+  
+  .about-image img {
+    width: 350px; /* Adjust width for rectangular size */
+    height: 600px; /* Adjust height */
+    object-fit: cover; /* Ensures the image fills the container */
+    border-radius: 10px; /* Rounded corners */
+    border: 5px solid #000000; /* White border around the image */
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+  }
+  
+  .about-text {
+    max-width: 600px;
+    margin-left: 30px;
+    text-align: left;
+  }
+  
+  .about-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .about-text h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 19px;
+    color: #00ffe5; /* Gold color for subheading */
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f7f7f7;
+    margin-bottom: 15px;
+  }
+  
+  .about-text p strong {
+    font-weight: 700;
+    color: #ffd700; /* Gold color for key points */
+  }
+  
+  .contact-links .contact-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffd700; /* Bright yellow button */
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  .contact-links .contact-button:hover {
+    background-color: #ffcc00; /* Hover effect with darker yellow */
+    transform: translateY(-5px); /* Smooth lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow for hover effect */
+  }
+  
+  /* Connect Section for Skills & Experience */
+  .connect-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between boxes */
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  .connect-box {
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+    overflow: hidden;
+  }
+  
+  .connect-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffd700; /* Connector color (Gold) */
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+  
+  .connect-box h4 {
+    font-size: 1.5rem;
+    color: #ffd700; /* Gold color for title */
+    margin-bottom: 10px;
+  }
+  
+  .connect-box ul,
+  .connect-box p {
+    display: none; /* Hidden by default */
+  }
+  
+  .connect-box.open ul,
+  .connect-box.open p {
+    display: block; /* Display when open */
+  }
+  
+  .connect-box:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3); /* Slightly brighter on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      margin-bottom: 20px;
+    }
+  
+    .about-text {
+      margin-left: 0;
+    }
+  
+    .about-text h1 {
+      font-size: 2rem;
+    }
+  
+    .about-text h3 {
+      font-size: 1.3rem;
+    }
+  
+    .about-text p {
+      font-size: 1rem;
+    }
+  
+    
+  
+    .connect-section {
+      flex-direction: column;
+    }
+  
+    .connect-box::before {
+      left: -5px;
+      top: 50%;
+    }
+  }
+  
